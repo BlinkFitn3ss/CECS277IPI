@@ -7,4 +7,12 @@ package cecs277ipi.CECS277IPI;
  */
 public class Triangle {
     
+    /**
+     *
+     * @param p1
+     * @param p2
+     * @param p3
+     */
+    public Triangle(Point p1, Point p2, Point p3){
+    }
 }

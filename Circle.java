@@ -6,7 +6,7 @@ package cecs277ipi.CECS277IPI;
  * @author Naveene Raya Carlos Alvarenga
  * @date 9/18/19
  */
-public class Circle {
+public class Circle extends GeometricObject{
     
     /**
      *
@@ -17,10 +17,6 @@ public class Circle {
     
     Point centerPt;
     double radius;
-    
-    // the class has the following member variables which will be used in the toString() method.
-    double area;
-    double perimeter;
     
     // constructor calculates 'area' and'perimeter' and stores them in class member variables.
     public Circle(Point centerPt_, double radius_){
@@ -43,5 +39,6 @@ public class Circle {
     @Override
     public String toString(){
         String str = "Circle: Center at:"+centerPt.toString()+" Radius: "+radius+" Area: "+area+" Perimeter: "+perimeter;
+        return str;
     }
 }

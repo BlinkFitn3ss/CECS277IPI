@@ -1,5 +1,6 @@
 package cecs277ipi.CECS277IPI;
 
+
 /**
  * Base class for all types of shapes. Abstract
  * @author Naveene Raya Carlos Alvarenga
@@ -11,6 +12,11 @@ public abstract class GeometricObject implements Comparable<GeometricObject>{
      *
      * @return
      */
+    
+    // Area and perimeter will be used by toString() for each shape.
+    double area;
+    double perimeter;
+    
     public abstract double Area();
  
     /**
@@ -25,6 +31,20 @@ public abstract class GeometricObject implements Comparable<GeometricObject>{
      */
     @Override
     public abstract String toString();
+    
+
+    
+    @Override
+    public int compareTo(GeometricObject compareObj){
+        if(area<compareObj.Area()){
+            return -1;
+        }
+        else if (area>compareObj.Area()){
+            return 1;
+        }
+        else
+            return 0;
+    }
     
     /**
      * compares to GeometricObjects returns the bigger one

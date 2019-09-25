@@ -10,26 +10,44 @@ import java.util.Arrays;
 public class GeometricObjectRunner {
     public static void main(String args[]){
         
+        //Creating Circle object
         Point newCirclePt = new Point(0,0);
         double newCircleRadius = 1.0;
         Circle newCircle = new Circle(newCirclePt, newCircleRadius);
         
-        Point newRectPt = (1,1);
-        double rectWidth = 2;
-        double rectLength = 3;
+        //Creating Rectangle object
+        Point newRectPt = new Point(1,1);
+        double rectWidth = 20;
+        double rectLength = 30;
         Rectangle newRect = new Rectangle(newRectPt, rectWidth, rectLength);
         
-        Point newTriPt1 = (1,0);
-        Point newTriPt2 = (-1,0);
-        Point newTriPt3 = (0,1);
+        //Creating Triangle object
+        Point newTriPt1 = new Point(1,0);
+        Point newTriPt2 = new Point(-1,0);
+        Point newTriPt3 = new Point(0,1);
         Triangle newTri = new Triangle(newTriPt1, newTriPt2, newTriPt3);
         
+        //Creating and populating GeometricObject array
         GeometricObject arr[] = {newCircle, newRect, newTri};
-        Arrays.parallelSort(arr);
+        
+        
+        //Printing data
+        System.out.println("Before the sort");
         
         int arraySize = 3;
         for(int i = 0; i<arraySize; i++){
             System.out.println(arr[i]);
         }
+        
+        Arrays.sort(arr); // TODO Java cannot find symbol 'Arrays.parallelSort()'
+    
+        
+        System.out.println("\nAfter the sort");
+        
+        for(int i = 0; i<arraySize; i++){
+            System.out.println(arr[i]);
+        }
+        
+        System.out.println("\nLargest found was: " +arr[arraySize-1]);
     }
 }

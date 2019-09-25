@@ -3,9 +3,9 @@ package cecs277ipi.CECS277IPI;
 import java.util.Arrays; 
 
 /**
- *
+ * driver class, create 3 geometric objects then sort them
  * @author Naveene Raya Carlos Alvarenga
- * @date 9/18/19 
+ * @date 9/25/19 
  */
 public class GeometricObjectRunner {
     public static void main(String args[]){
@@ -39,7 +39,7 @@ public class GeometricObjectRunner {
             System.out.println(arr[i]);
         }
         
-        Arrays.sort(arr); // TODO Java cannot find symbol 'Arrays.parallelSort()'
+        Arrays.parallelSort(arr);     //parallel sort
     
         
         System.out.println("\nAfter the sort");

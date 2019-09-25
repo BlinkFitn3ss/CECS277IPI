@@ -3,25 +3,23 @@ package cecs277ipi.CECS277IPI;
 /**
  *
  * @author Naveene Raya Carlos Alvarenga
- * @date 9/18/19 
+ * @date 9/25/19 
  */
 public class Triangle extends GeometricObject{
     
+    private Point p1;
+    private Point p2;
+    private Point p3;  
+    private double sideA;
+    private double sideB;
+    private double sideC;
+    
     /**
-     *
-     * @param p1
-     * @param p2
-     * @param p3
+     * constructs triangle object and calculates its area and perimeter
+     * @param p1_
+     * @param p2_
+     * @param p3_
      */
-    Point p1;
-    Point p2;
-    Point p3;
-    
-    double sideA;
-    double sideB;
-    double sideC;
-    
-    // constructor calculates 'area' and'perimeter' and stores them in class member variables.
     public Triangle(Point p1_, Point p2_, Point p3_){
         p1 = p1_;
         p2 = p2_;
@@ -36,16 +34,28 @@ public class Triangle extends GeometricObject{
 
     }
     
+    /**
+     * returns area
+     * @return
+     */
     @Override
     public double Area(){
         return area;
     }
     
+    /**
+     * returns perimeter
+     * @return 
+     */
     @Override
     public double Perimeter(){
         return perimeter;
     }
     
+    /**
+     * returns object name and specifications 
+     * @return 
+     */
     @Override
     public String toString(){
         String str = "Triangle: "+p1.toString()+", "+p2.toString()+", "+p3.toString()+" Area: "+area+" Perimeter: "+perimeter;

@@ -5,7 +5,7 @@ import static java.lang.Math.sqrt;
 /**
  *
  * @author Naveene Raya Carlos Alvarenga
- * @date 9/18/19
+ * @date 9/25/19
  */
 public class Point {
     private final double xCoord;

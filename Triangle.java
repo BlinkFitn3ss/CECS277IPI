@@ -5,7 +5,7 @@ package cecs277ipi.CECS277IPI;
  * @author Naveene Raya Carlos Alvarenga
  * @date 9/18/19 
  */
-public class Triangle {
+public class Triangle extends GeometricObject{
     
     /**
      *
@@ -21,10 +21,6 @@ public class Triangle {
     double sideB;
     double sideC;
     
-    // the class has the following member variables which will be used in the toString() method.
-    double area;
-    double perimeter;
-    
     // constructor calculates 'area' and'perimeter' and stores them in class member variables.
     public Triangle(Point p1_, Point p2_, Point p3_){
         p1 = p1_;
@@ -35,7 +31,7 @@ public class Triangle {
         sideC = p3.distance(p1);
         
         double s = (sideA+sideB+sideC)/2.0;
-        area = sqrt(s*(s-sideA)*(s-sideB)*(s-sideC));
+        area = Math.sqrt(s*(s-sideA)*(s-sideB)*(s-sideC));
         perimeter = sideA+sideB+sideC;
 
     }
@@ -52,7 +48,7 @@ public class Triangle {
     
     @Override
     public String toString(){
-        String str = "Triangle: "+p1.toString()+", "+p2.toString+", "+p3.toString+" Area: "+area+" Perimeter: "+perimeter;
+        String str = "Triangle: "+p1.toString()+", "+p2.toString()+", "+p3.toString()+" Area: "+area+" Perimeter: "+perimeter;
         return str;
     }
     

@@ -1,6 +1,7 @@
 package cecs277ipi.CECS277IPI;
 
-//import java.math.MathContext;
+import static java.lang.Math.sqrt;
+
 /**
  *
  * @author Naveene Raya Carlos Alvarenga
@@ -30,6 +31,7 @@ public class Point {
     }
     
     public double distance(Point P){
+        dist = sqrt((P.getxCoord() - this.getxCoord()) * (P.getxCoord() - this.getxCoord()) + (P.getyCoord() - this.yCoord) * (P.getyCoord() - this.yCoord));   // distance formula for points
         
         return dist;
     }
@@ -37,5 +39,19 @@ public class Point {
     @Override
     public String toString(){
         return "";
+    }
+
+    /**
+     * @return the xCoord
+     */
+    public double getxCoord() {
+        return xCoord;
+    }
+
+    /**
+     * @return the yCoord
+     */
+    public double getyCoord() {
+        return yCoord;
     }
 }

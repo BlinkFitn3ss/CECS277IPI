@@ -18,9 +18,11 @@ public class Rectangle {
     double width;
     double length;
     
+    // the class has the following member variables which will be used in the toString() method.
     double area;
     double perimeter;
     
+    // constructor calculates 'area' and 'perimeter' and stores them in class member variables.
     public Rectangle(Point upperLeftPt_, double width_, double length_){
         upperLeftPt = upperLeftPt_;
         width = width_;

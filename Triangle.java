@@ -21,9 +21,11 @@ public class Triangle {
     double sideB;
     double sideC;
     
+    // the class has the following member variables which will be used in the toString() method.
     double area;
     double perimeter;
     
+    // constructor calculates 'area' and'perimeter' and stores them in class member variables.
     public Triangle(Point p1_, Point p2_, Point p3_){
         p1 = p1_;
         p2 = p2_;

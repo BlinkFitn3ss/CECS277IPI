@@ -1,5 +1,6 @@
 package cecs277ipi.CECS277IPI;
 
+
 /**
  * Location of the upper left corner
  * Width (must be > 0)
@@ -7,7 +8,7 @@ package cecs277ipi.CECS277IPI;
  * @author Naveene Raya Carlos Alvarenga
  * @date 9/18/19
  */
-public class Rectangle {
+public class Rectangle extends GeometricObject {
     
     /**
      *
@@ -18,21 +19,17 @@ public class Rectangle {
     double width;
     double length;
     
-    // the class has the following member variables which will be used in the toString() method.
-    double area;
-    double perimeter;
-    
     // constructor calculates 'area' and 'perimeter' and stores them in class member variables.
     public Rectangle(Point upperLeftPt_, double width_, double length_){
         upperLeftPt = upperLeftPt_;
         width = width_;
         length = length_;
-        area = width*length;
-        perimeter = 2*(width+length);
+        area = width*length; //from super
+        perimeter = 2*(width+length); //from super
     }
     
     @Override
-    public doubleArea(){
+    public double Area(){
         return area;
     }
     
@@ -44,5 +41,7 @@ public class Rectangle {
     @Override
     public String toString(){
         String str = "Rectangle: Upper left corner at: "+upperLeftPt.toString()+" ,"+" Width: "+width+" Length: "+length+" Area: "+area+" Perimeter: "+perimeter;
+        return str;
     }
+    
 }
